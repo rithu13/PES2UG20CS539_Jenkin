@@ -15,6 +15,7 @@ stages {
 
 stage('Deploy') {
       when {
+          sh npmi
         expression {
           currentBuild.result == null || currentBuild.result == 'SUCCESS' 
         }
